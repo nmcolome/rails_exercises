@@ -7,4 +7,8 @@ Rails.application.routes.draw do
   post '/dogs', to: 'dogs#create'
   patch '/dogs/:id', to: 'dogs#update'
   delete '/dogs/:id', to: 'dogs#destroy'
+
+  get '/dogs/:dog_id/tricks', to: 'tricks#index'
+  get '/dogs/:dog_id/tricks/new', to: 'tricks#new'
+  post '/dogs/:dog_id/tricks', to: 'tricks#create'
 end
