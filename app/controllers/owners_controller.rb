@@ -1,4 +1,3 @@
-require 'pry'
 class OwnersController < ApplicationController
   def index
     @owners = Owner.all
