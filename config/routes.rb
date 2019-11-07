@@ -11,4 +11,9 @@ Rails.application.routes.draw do
   get '/dogs/:dog_id/tricks', to: 'tricks#index'
   get '/dogs/:dog_id/tricks/new', to: 'tricks#new'
   post '/dogs/:dog_id/tricks', to: 'tricks#create'
+
+  get '/hello', to: 'nonrestful#hello'
+  get '/greetings/:name', to: 'nonrestful#what_is_your_name'
+  patch '/items/:the_item_id/deactivate', to: 'nonrestful#deactivate'
+  delete '/subtract/:x/from/:y', to: 'nonrestful#subtract'
 end
