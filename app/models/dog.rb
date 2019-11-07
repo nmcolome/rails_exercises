@@ -23,7 +23,7 @@ class Dog < ApplicationRecord
   end
 
   def self.unique_breeds
-    pluck(:breed).uniq!
+    breeds.uniq!
   end
 
   def self.age_greater_than(age)
@@ -43,7 +43,7 @@ class Dog < ApplicationRecord
   end
 
   def alphabetical_tricks_limit(limit)
-    tricks.order(:title).limit(limit)
+    alphabetical_tricks.limit(limit)
   end
 
   def self.owned_more_than_3_years
