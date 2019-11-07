@@ -2,6 +2,8 @@ require 'pry'
 
 class Dog < ApplicationRecord
   has_many :tricks
+  has_many :ownerships
+  has_many :owners, through: :ownerships
 
   validates :name, :age, :breed, presence: true
   validates :age, numericality: { greater_than_or_equal_to: 0 }
