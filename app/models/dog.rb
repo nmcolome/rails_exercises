@@ -1,5 +1,3 @@
-require 'pry'
-
 class Dog < ApplicationRecord
   has_many :tricks
   has_many :ownerships
@@ -49,6 +47,6 @@ class Dog < ApplicationRecord
   end
 
   def self.owned_more_than_3_years
-    binding.pry
+    joins(:ownerships).where("length > ?", 3)
   end
 end
