@@ -32,4 +32,4 @@ class DogsController < ApplicationController
 
     redirect_to :dogs
   end
-end
+end 
